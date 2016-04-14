@@ -1,6 +1,7 @@
 ﻿using Day1Homeowrk.Models;
 using Day1Homeowrk.Models.Repositories;
 using Day1Homeowrk.ViewModels;
+using System;
 using System.Web.Mvc;
 
 namespace Day1Homeowrk.Controllers
@@ -13,7 +14,7 @@ namespace Day1Homeowrk.Controllers
         }
         public ActionResult ViewAndAddMoneyLog()
         {
-            //ViewData.Model = new MoneyLog { Date = DateTime.Now.Date };
+            //ViewData.Model = new ViewAndAddMoneyLogViewModel {  AddedLog = new MoneyLog { Date = DateTime.Now"yyyy - MM - dd") } };
             return View();
         }
         [HttpPost]
