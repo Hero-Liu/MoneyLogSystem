@@ -9,17 +9,24 @@ namespace Day1Homeowrk.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("ViewAndAddMoneyLog");
         }
         public ActionResult ViewAndAddMoneyLog()
         {
+            //ViewData.Model = new MoneyLog { Date = DateTime.Now.Date };
             return View();
         }
         [HttpPost]
         public ActionResult ViewAndAddMoneyLog(MoneyLog moneyLog)
         {
             MoneyLogRepositorie.AddMoneyLog(moneyLog);
-            var viewModel = new ViewAndAddMoneyLogViewModel { AddedLog=moneyLog, HistroyLog = MoneyLogRepositorie.GetAllMoneyLogs()};
+            var viewData = new ViewAndAddMoneyLogViewModel{AddedLog = moneyLog};
+            return View();
+        }
+
+        public ActionResult ChildHistory()
+        {
+            ViewData.Model = MoneyLogRepositorie.GetAllMoneyLogs();
             return View();
         }
         public ActionResult About()

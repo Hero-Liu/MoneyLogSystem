@@ -1,0 +1,28 @@
+﻿@model List<Day1Homeowrk.Models.MoneyLog>
+
+@{
+    ViewBag.Title = "ChildHistory";
+    Layout = null;
+}
+
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Money
+            </td>
+            <td>
+                @item.LogType
+            </td>
+            <td>
+                @item.Remark
+            </td>
+        </tr>
+    }
+
+</table>

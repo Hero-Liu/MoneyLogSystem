@@ -273,6 +273,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\ViewAndAddMoneyLog.cshtml" />
     <Content Include="Views\Home\_AddMoneyLog.cshtml" />
+    <Content Include="Views\Home\ChildHistory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
