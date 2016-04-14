@@ -1,0 +1,23 @@
+﻿@model Day1Homeowrk.ViewModels.ViewAndAddMoneyLogViewModel
+
+@{
+    ViewBag.Title = "ViewAndAddMoneyLog";
+}
+@{
+    if (Model!= null&&Model.AddedLog!=null)
+    {
+        @Html.Partial("_AddMoneyLog", Model.AddedLog)
+    }
+    else
+    {
+        @Html.Partial("_AddMoneyLog")
+    }
+}
+<div>
+
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
