@@ -7,7 +7,7 @@ namespace Day1Homeowrk.Models
     {
         [Required]
         [Display(Name = "電子郵件")]
-        public string Email { get; set; }
+        public string Email { get; set; }//test
     }
 
     public class ExternalLoginListViewModel
