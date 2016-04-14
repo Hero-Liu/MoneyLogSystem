@@ -3,16 +3,18 @@
 @{
     ViewBag.Title = "ViewAndAddMoneyLog";
 }
-@{
-    if (Model!= null&&Model.AddedLog!=null)
-    {
-        @Html.Partial("_AddMoneyLog", Model.AddedLog)
+<div calss ="well">
+    @{
+        if (Model != null && Model.AddedLog != null)
+        {
+            @Html.Partial("_AddMoneyLog", Model.AddedLog)
+        }
+        else
+        {
+            @Html.Partial("_AddMoneyLog")
+        }
     }
-    else
-    {
-        @Html.Partial("_AddMoneyLog")
-    }
-}
+</div>
 <div>
     @Html.Action("ChildHistory")
 </div>

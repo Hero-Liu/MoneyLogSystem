@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 namespace Day1Homeowrk.Models.Repositories
 {
     public class MoneyLogRepositorie
@@ -10,7 +11,16 @@ namespace Day1Homeowrk.Models.Repositories
         }
         public static List<MoneyLog> GetAllMoneyLogs()
         {
+            if (_Logs.Count == 0)
+                insertData();
             return _Logs;
+        }
+        private static void insertData()
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                AddMoneyLog(new MoneyLog { Money = 10 * i, Date = DateTime.Now, LogType = MoneyLogTypeEnum.OutCash });
+            }
         }
     }
 }

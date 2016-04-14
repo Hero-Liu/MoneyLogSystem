@@ -11,7 +11,6 @@
         <th>類別</th>
         <th>日期</th>
         <th>金額</th>
-        <th>備註</th>
     </tr>
 
     @{  
@@ -20,21 +19,10 @@
         {
             index++;
             <tr>
-                <td>
-                    @index
-                </td>
-                <td>
-                    @item.LogType
-                </td>
-                <td>
-                    @item.Date
-                </td>
-                <td>
-                    @item.Money
-                </td>
-                <td>
-                    @item.Remark
-                </td>
+                <td>@index</td>
+                <td>@item.LogType</td>
+                <td>@item.Date</td>
+                <td>@item.Money</td>
             </tr>
         }
     }
