@@ -1,6 +1,6 @@
-﻿using Day1Homeowrk.Models;
+﻿using Day1Homework.Models;
 
-namespace Day1Homeowrk.ViewModels
+namespace Day1Homework.ViewModels
 {
     public class ViewAndAddMoneyLogViewModel
     {

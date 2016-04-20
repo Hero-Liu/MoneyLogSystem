@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Day1Homeowrk
+namespace Day1Homework
 {
     public class RouteConfig
     {

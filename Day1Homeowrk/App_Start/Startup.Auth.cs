@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Day1Homeowrk.Models;
+using Day1Homework.Models;
 
-namespace Day1Homeowrk
+namespace Day1Homework
 {
     public partial class Startup
     {

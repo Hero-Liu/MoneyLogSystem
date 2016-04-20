@@ -1,9 +1,9 @@
-﻿using Day1Homeowrk.Models;
-using Day1Homeowrk.Models.Repositories;
-using Day1Homeowrk.ViewModels;
+﻿using Day1Homework.Models;
+using Day1Homework.Models.Repositories;
+using Day1Homework.ViewModels;
 using System.Web.Mvc;
 
-namespace Day1Homeowrk.Controllers
+namespace Day1Homework.Controllers
 {
     public class HomeController : Controller
     {
@@ -19,7 +19,8 @@ namespace Day1Homeowrk.Controllers
         public ActionResult ViewAndAddMoneyLog(MoneyLog moneyLog)
         {
             MoneyLogRepositorie.AddMoneyLog(moneyLog);
-            var viewData = new ViewAndAddMoneyLogViewModel{AddedLog = moneyLog};
+            var temp = new MoneyLog { Money = 50 };
+            ViewData.Model = new ViewAndAddMoneyLogViewModel{AddedLog = temp};
             return View();
         }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Day1Homeowrk.Models
+namespace Day1Homework.Models
 {
     public class MoneyLog
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace Day1Homeowrk
+namespace Day1Homework
 {
     public enum MoneyLogTypeEnum
     {

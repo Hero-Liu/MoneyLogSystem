@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Day1Homeowrk
+namespace Day1Homework
 {
     public class FilterConfig
     {

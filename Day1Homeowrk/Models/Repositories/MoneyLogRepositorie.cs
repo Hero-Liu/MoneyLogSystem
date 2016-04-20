@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace Day1Homeowrk.Models.Repositories
+namespace Day1Homework.Models.Repositories
 {
     public class MoneyLogRepositorie
     {

@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Day1Homeowrk.Models;
+using Day1Homework.Models;
 
-namespace Day1Homeowrk.Controllers
+namespace Day1Homework.Controllers
 {
     [Authorize]
     public class ManageController : Controller
