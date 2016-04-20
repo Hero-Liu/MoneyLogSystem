@@ -212,6 +212,10 @@
     <Compile Include="ViewModels\ViewAndAddMoneyLogViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HomeworkDB.mdf" />
+    <Content Include="App_Data\HomeworkDB_log.ldf">
+      <DependentUpon>HomeworkDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -275,9 +279,7 @@
     <Content Include="Views\Home\_AddMoneyLog.cshtml" />
     <Content Include="Views\Home\ChildHistory.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
