@@ -5,12 +5,19 @@ namespace Day1Homework.Models.Repositories
 {
     public class MoneyLogRepositorie
     {
-        private static List<MoneyLog> _Logs = new List<MoneyLog>();
         private static string strConn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\GitHub\\Source\\Repos\\MoneyLogSystem\\MoneyLogSystem\\Day1Homework\\App_Data\\HomeworkDB.mdf;Integrated Security=True";
         private static SqlConnection myConn = new SqlConnection(strConn);
         public static void AddMoneyLog(MoneyLog log)
         {
-            _Logs.Add(log);
+            var query = @"insert into MoneyLog(Money,Remark,Date,LogType) values (@money,@remark,@date,@logType)";
+            myConn.Open();
+            SqlCommand command = new SqlCommand(query, myConn);
+            command.Parameters.AddWithValue("@money", log.Money);
+            command.Parameters.AddWithValue("@remark", log.Remark);
+            command.Parameters.AddWithValue("@date", log.Date);
+            command.Parameters.AddWithValue("@logType", (int)log.LogType);
+            command.ExecuteNonQuery();
+            myConn.Close();
         }
         public static List<MoneyLog> GetAllMoneyLogs()
         {
@@ -32,12 +39,6 @@ namespace Day1Homework.Models.Repositories
             myConn.Close();
             return logs;
         }
-        //private static void insertData()
-        //{
-        //    for(int i = 0; i < 5; i++)
-        //    {
-        //        AddMoneyLog(new MoneyLog { Money = 10 * i, Date = DateTime.Now, LogType = MoneyLogTypeEnum.OutCash });
-        //    }
-        //}
+       
     }
 }
